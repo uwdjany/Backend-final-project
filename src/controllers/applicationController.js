@@ -36,7 +36,20 @@ class ApplicationController{
 
 
         //Get ALL Application 
+static async getAllApplication(req,res){
+    const Applicant = await ApplicationService.getAllApplication(req);
+    if(Applicant){
+        return Response.errorMessage(res,"Not Found Appication", 400);
 
+    }
+    return Response.successMessage(
+        res,
+        "Successful Application",
+        Applicant,
+        200
+
+    );
+}
         
     }
 
