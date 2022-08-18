@@ -23,6 +23,9 @@ route.patch("/mentorUpdate/:id" , MentorController.updateMentor);
 
 
 route.post("/apply" ,ApplicationController.submitApplication);
+route.get("/getApplication",ApplicationController.getAllApplication);
+
+
 export default route
 
 //sending email 
