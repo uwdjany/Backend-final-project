@@ -19,7 +19,7 @@ class Validator{
     check("lastName","please your last name have special charcter").isAlpha(),
     check("gender","gender is Invalid").isIn(['male','female']),
     check("phoneNumber","Your phone number is invalid").isMobilePhone(),
-    check("age","age should be integer").isInt(),
+    // check("age","age should be integer").isInt(),
     check("password","password must be strong").isStrongPassword()
         ]
 
