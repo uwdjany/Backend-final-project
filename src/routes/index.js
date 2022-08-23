@@ -5,6 +5,8 @@ import Validator from "../middlewares/validator";
 import DataChecker from "../middlewares/dataChecker";
 import VerifyAccess from "../middlewares/verifyAccess";
 import VerifyToken from "../middlewares/verifyToken";
+import CourseController from "../controllers/courseController";
+import AttendenceController from "../controllers/attendenceController";
 
 const route = Router();
 
@@ -26,7 +28,16 @@ route.post("/apply" ,ApplicationController.submitApplication);
 route.get("/getApplication",ApplicationController.getAllApplication);
 
 
+//Course Routes
+
+
+route.post("/create/course" ,CourseController.createCourse);
+route.get("/getAll/course",CourseController.getAllCourses);
+
+// Attendence routes
+
+route.post("/create/attendence" ,AttendenceController.createAttendence);
+route.get("/getAll/attendence" ,AttendenceController.getAllAttendence);
 export default route
 
-//sending email 
 
