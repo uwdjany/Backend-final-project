@@ -5,10 +5,10 @@ import mongoose from 'mongoose';
 import route from './routes';
 import { reset } from "nodemon";
 
-
+import cors from "cors";
 const nodemailer = require("nodemailer");
 const app = express();
-
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/',(req,res) => {
